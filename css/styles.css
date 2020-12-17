@@ -6,6 +6,73 @@
   font-family: Verdana, serif;
 }
 
+header .nav-mobile {
+  position: relative;
+}
+
+header .nav-mobile .logo {
+  color: white;
+  font-size: 1.3rem;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+header .nav-mobile .logo::after {
+  content: 'HHH';
+  position: absolute;
+  top: -5px;
+  right: -15px;
+  min-height: 30px;
+  min-width: 30px;
+  font-size: 15px;
+  background-color: transparent;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  color: transparent;
+}
+
+header .nav-mobile .logo::before {
+  content: 'HHH';
+  position: absolute;
+  bottom: -5px;
+  left: -15px;
+  min-height: 30px;
+  min-width: 30px;
+  font-size: 15px;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  color: transparent;
+}
+
+header .nav-mobile .hamburger {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .nav-mobile .hamburger .line {
+  height: 3px;
+  width: 30px;
+  background: white;
+  border-radius: 5px;
+  margin: 3px;
+}
+
 .hero {
   height: 100vh;
 }
