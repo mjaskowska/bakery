@@ -176,6 +176,9 @@ header {
             margin-top: 12px;
             font-weight: bold;
         }
+        i {
+          color: $orange;
+        }
         .cupcakes, .bread, .cakes {
             
             text-align: center;
@@ -222,7 +225,8 @@ header {
 }
 .about-me{
     width: 100%;
-    background: rgba(128, 128, 128, 0.637);
+    background: $orange;
+    color: white;
     img {
         height: 200px;
         width: 200px;
@@ -267,7 +271,12 @@ header {
         margin-bottom: 50px;
     }
     p {
+      padding-top: 15px;
         margin-bottom: 50px;
+        font-size: 1.1rem;
+    }
+    i {
+      color: $orange;
     }
     
     .media-list {
@@ -279,6 +288,7 @@ header {
         margin-bottom: 100px;
         li {
             padding: 0 20px;
+            color: $orange;
         }
     }
 }

@@ -1,4 +1,4 @@
-// hamburger mobile 
+// hamburger
 const hamburger = document.querySelector('.hamburger');
 const lineTop = document.querySelector('.lineTop');
 const lineMiddle = document.querySelector('.lineMiddle');
@@ -29,3 +29,22 @@ hamburger.addEventListener('click', _ => {
   hamburger.classList.toggle('js-cross');
   toggleMenu.reversed() ? toggleMenu.play() : toggleMenu.reverse();
 });
+
+// hero animation
+const heroContent = document.querySelector('.hero-list');
+
+gsap.fromTo(heroContent.children, {x: '+=150', opacity: 0}, {x: 0, opacity: 1, duration: 1.5, ease: 'easeInOut'})
+
+// scroll trigger all sections animation
+gsap.registerPlugin(ScrollTrigger);
+
+const sections = document.querySelectorAll('section');
+
+sections.forEach(section => {
+  gsap.fromTo(section.children, {y: '+=50', opacity: 0}, {y: 0, opacity: 1, duration: 1, ease: 'easeInOut', scrollTrigger: {
+    trigger: section,
+    start: 'top 80%'
+  }})
+})
+
+

@@ -218,6 +218,10 @@ header .nav-mobile .hamburger .line {
   font-weight: bold;
 }
 
+.menu .menu-list i {
+  color: #e06b2c;
+}
+
 .menu .menu-list .cupcakes, .menu .menu-list .bread, .menu .menu-list .cakes {
   text-align: center;
 }
@@ -271,7 +275,8 @@ header .nav-mobile .hamburger .line {
 
 .about-me {
   width: 100%;
-  background: rgba(128, 128, 128, 0.637);
+  background: #e06b2c;
+  color: white;
 }
 
 .about-me img {
@@ -324,7 +329,13 @@ header .nav-mobile .hamburger .line {
 }
 
 .contact p {
+  padding-top: 15px;
   margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.contact i {
+  color: #e06b2c;
 }
 
 .contact .media-list {
@@ -344,6 +355,7 @@ header .nav-mobile .hamburger .line {
 
 .contact .media-list li {
   padding: 0 20px;
+  color: #e06b2c;
 }
 
 @media (min-width: 400px) {
