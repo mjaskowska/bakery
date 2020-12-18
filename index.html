@@ -9,8 +9,10 @@
     <link rel="icon" type="image/x-icon" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1" shrink-to-fit=no>
-   
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -25,6 +27,14 @@
                 <div class="lineMiddle line"></div>
                 <div class="lineBottom line"></div>
             </div>
+            <div class="menu-slide">
+                <ul class="menu-items">
+                    <li class="menu-item"><a href="#offer">Offer</a></li>
+                    <li class="menu-item"><a href="#gallery">Gallery</a></li>
+                    <li class="menu-item"><a href="#about">About me</a></li>
+                    <li class="menu-item"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </nav>
 
     </header>
@@ -34,7 +44,7 @@
             <h1>Lorem Ipsum</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At impedit possimus a accusantium explicabo
                 voluptas sequi vitae expedita dignissimos cum!</p>
-            <button class="hire-me-btn">Hire me</button>
+            <button class="hire-me-btn"><a href="#contact">Hire me</a></button>
         </div>
 
         <img src="./img/zoltan-tasi-k4kK9_OQk24-unsplash.jpg" alt="cakes">
@@ -46,47 +56,70 @@
             <li><i class="fab fa-facebook"></i></li>
             <li><i class="fab b fa-instagram"></i></li>
             <li><i class="fab fa-twitter"></i></li>
-            
+
         </ul>
     </div>
 
-    <section class="menu">
+    <section class="menu" id="offer">
         <h3>What do I bake?</h3>
         <div class="menu-list">
             <div class="cakes">
                 <i class="fas fa-birthday-cake"></i>
                 <p>Cakes and cupcakes</p>
-                
+
             </div>
             <div class="cupcakes">
                 <i class="fas fa-cookie-bite"></i>
                 <p>Cookies</p>
-                
+
             </div>
             <div class="bread">
                 <i class="fas fa-bread-slice"></i>
                 <p>Bread</p>
-                
+
             </div>
         </div>
     </section>
-    <section class="my-latest">
+    <section class="my-latest" id="gallery">
         <h3>My latest</h3>
-        
-        <div class="carousel">
-            <img src="./img/deva-williamson-S2jw81lfrG0-unsplash.jpg" alt="">
-            <img src="./img/dani-rendina-rSCKaXQdSs4-unsplash.jpg" alt="">
-            <img src="./img/1logan-ellzey-tOKVj3FOUbA-unsplash.jpg" alt="">
+        <div class="carousel1">
+            <div class="slideshow-container">
+
+                <div class="image-container">
+                  <img src="./img/222swapnil-dwivedi-Nl8Oa6ZuNcA-unsplash.jpg" class="image fade" />
+                </div>
+                <div class="image-container">
+                  <img src="./img/222elizar-ivanov-rXB9YjOQX8I-unsplash.jpg" class="image fade" />
+                </div>
+                <div class="image-container">
+                  <img src="./img/222rae-goldman-cKJ8ZxQ2bC8-unsplash.jpg" class="image fade" />
+                </div>
+            
+                <a class="prev" onclick="newSlide(-1)">&#10094;</a>
+                <a class="next" onclick="newSlide(1)">&#10095;</a>
+            
+                <div class="dot-container">
+                  <span class="dot" onclick="currentSlide(1)"></span>
+                  <span class="dot" onclick="currentSlide(2)"></span>
+                  <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            
+              </div>
+            
         </div>
-        
+       
+
         <button class="more-btn">See more</button>
     </section>
-    <div class="about-me">
+    <div class="about-me" id="about">
         <img src="./img/matheus-ferrero-pg_WCHWSdT8-unsplash.jpg" alt="">
         <section class="about-text">
             <h3>About me</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit nostrum iste quae nisi eos suscipit autem optio. Deserunt, error.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, nulla quaerat, delectus non quia quasi unde dignissimos adipisci, iste illo laborum nisi officiis reiciendis esse iure praesentium eum facere dolor ipsam ducimus. Animi repudiandae, dicta magnam ea.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad fugit nostrum iste quae nisi eos suscipit
+                autem optio. Deserunt, error.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, nulla quaerat, delectus non quia quasi
+                unde dignissimos adipisci, iste illo laborum nisi officiis reiciendis esse iure praesentium eum facere
+                dolor ipsam ducimus. Animi repudiandae, dicta magnam ea.</p>
             <p>Lorem ipsum:</p>
             <ul class="hobbies">
                 <li class="hobby">Lorem, ipsum.</li>
@@ -98,37 +131,39 @@
             </ul>
         </section>
     </div>
-    <section class="contact">
+    <section class="contact" id="contact">
         <h3>Where to find me</h3>
         <div class="contact-info">
             <div class="phone">
                 <i class="fas fa-phone-alt"></i>
-                <p >07000 000 000</p>
+                <p>07000 000 000</p>
             </div>
             <div class="email">
                 <i class="fas fa-envelope"></i>
                 <p>contact.me@bakery.com</p>
             </div>
         </div>
-        
-        
+
+
         <ul class="media-list">
             <li><i class="fab fa-facebook"></i></li>
             <li><i class="fab b fa-instagram"></i></li>
             <li><i class="fab fa-twitter"></i></li>
-            
+
         </ul>
     </section>
 
-    
-    
+
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
         integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
-      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"
+        integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw=="
+        crossorigin="anonymous"></script>
+
 
     <script src="./app.js" async defer></script>
 </body>

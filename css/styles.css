@@ -47,6 +47,7 @@ header .nav-mobile .logo::before {
 }
 
 header .nav-mobile .hamburger {
+  z-index: 99;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -73,8 +74,66 @@ header .nav-mobile .hamburger .line {
   margin: 3px;
 }
 
+header .nav-mobile .menu-slide {
+  overflow-x: hidden;
+  color: white;
+  height: 100vh;
+  width: 350px;
+  min-width: 200px;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+header .nav-mobile .menu-slide .menu-items {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -500px;
+  width: 350px;
+  min-width: 200px;
+  background-color: rgba(224, 107, 44, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+header .nav-mobile .menu-slide .menu-items .menu-item {
+  font-size: 1.1rem;
+  list-style: none;
+  padding-top: calc(100vh/10);
+}
+
+header .nav-mobile .menu-slide .menu-items .menu-item a {
+  padding: 10px 30px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-active {
+  -webkit-transform: translateX(-500px);
+          transform: translateX(-500px);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
 .hero {
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .hero .hero-list {
@@ -128,6 +187,11 @@ header .nav-mobile .hamburger .line {
           transform: scale(1.02);
 }
 
+.hero .hero-list .hire-me-btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .hero img {
   position: absolute;
   top: 0;
@@ -171,6 +235,12 @@ header .nav-mobile .hamburger .line {
   cursor: pointer;
 }
 
+.media .media-list li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #e06b2c;
+}
+
 .media .media-list::before {
   content: '';
   width: 25%;
@@ -190,7 +260,7 @@ header .nav-mobile .hamburger .line {
 }
 
 .menu {
-  margin: 70px 0;
+  margin: 150px 0;
   width: 100%;
 }
 
@@ -198,7 +268,7 @@ header .nav-mobile .hamburger .line {
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 
 .menu .menu-list {
@@ -227,6 +297,7 @@ header .nav-mobile .hamburger .line {
 }
 
 .my-latest {
+  margin-bottom: 120px;
   width: 100%;
 }
 
@@ -252,8 +323,144 @@ header .nav-mobile .hamburger .line {
      object-position: center center;
 }
 
+.my-latest .carousel1 .slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.my-latest .carousel1 .image-container {
+  display: block;
+  overflow: hidden;
+}
+
+.my-latest .carousel1 .image-container .image {
+  width: 100%;
+  max-height: 500px;
+  margin: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.my-latest .carousel1 .prev, .my-latest .carousel1 .next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  margin-top: 22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 0px 3px 3px 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.my-latest .carousel1 .next {
+  right: 0px;
+  border-radius: 3px 0px 0px 3px;
+}
+
+.my-latest .carousel1 .prev:hover, .my-latest .carousel1 .next:hover {
+  background-color: black;
+}
+
+.my-latest .carousel1 .dot-container {
+  text-align: center;
+}
+
+.my-latest .carousel1 .dot {
+  position: inherit;
+  top: -40px;
+  height: 8px;
+  width: 36px;
+  background-color: #bbb;
+  border-radius: 0px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.my-latest .carousel1 .active, .my-latest .carousel1 .dot:hover {
+  background-color: #555;
+}
+
+.my-latest .carousel1 .content {
+  color: white;
+  text-align: justify;
+  padding: 12px 60px;
+  letter-spacing: 1px;
+  font-family: verdana,sans-serif;
+}
+
+.my-latest .carousel1 .fade {
+  -webkit-animation: fade .3s ease-in-out;
+          animation: fade .3s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .my-latest .carousel1 .prev, .my-latest .carousel1 .next {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .my-latest .carousel1 .dot-container {
+    padding: 0px;
+  }
+  .my-latest .carousel1 .dot {
+    height: 4px;
+    width: 18px;
+  }
+  .my-latest .carousel1 .content {
+    font-size: 12px;
+    padding: 6px 24px;
+  }
+}
+
 .my-latest h3 {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   font-size: 1.1rem;
   text-align: center;
   font-weight: bold;
@@ -317,7 +524,7 @@ header .nav-mobile .hamburger .line {
 }
 
 .contact {
-  margin: 40px 0;
+  margin: 150px 0;
   width: 100%;
   text-align: center;
 }
@@ -336,6 +543,11 @@ header .nav-mobile .hamburger .line {
 
 .contact i {
   color: #e06b2c;
+}
+
+.contact i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .contact .media-list {
