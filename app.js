@@ -1,4 +1,4 @@
-// hamburger
+// hamburger icon animation
 const hamburger = document.querySelector('.hamburger');
 const lineTop = document.querySelector('.lineTop');
 const lineMiddle = document.querySelector('.lineMiddle');
@@ -30,6 +30,13 @@ hamburger.addEventListener('click', _ => {
   toggleMenu.reversed() ? toggleMenu.play() : toggleMenu.reverse();
 });
 
+// hamburger menu slide in/out
+const menuItems = document.querySelector('.menu-items')
+hamburger.addEventListener('click', _ => {
+menuItems.classList.toggle("menu-active")
+} )
+
+
 // hero animation
 const heroContent = document.querySelector('.hero-list');
 
@@ -47,4 +54,10 @@ sections.forEach(section => {
   }})
 })
 
-
+const menuItemAll = document.querySelectorAll('.menu-item')
+menuItemAll.forEach(item => {
+  item.addEventListener('click', function() {
+    menuItems.classList.remove("menu-active")
+    toggleMenu.reverse()
+  })
+})
