@@ -301,32 +301,11 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   width: 100%;
 }
 
-.my-latest .carousel {
-  width: 100%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: #06151c;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.my-latest .carousel img {
-  width: calc(100% /3);
-  max-height: 75vh;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center center;
-     object-position: center center;
-}
-
 .my-latest .carousel1 .slideshow-container {
   position: relative;
   width: 100%;
   overflow: hidden;
+  background-color: #f0ebeb;
 }
 
 .my-latest .carousel1 .image-container {
@@ -336,8 +315,10 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
 
 .my-latest .carousel1 .image-container .image {
   width: 100%;
+  max-width: 1350px;
+  display: block;
   max-height: 500px;
-  margin: 0px;
+  margin: 0px auto;
   -o-object-fit: cover;
      object-fit: cover;
 }

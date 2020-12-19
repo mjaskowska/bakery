@@ -241,33 +241,25 @@ header {
 .my-latest{
   margin-bottom: 120px;
     width: 100%;
-    .carousel {
-        width: 100%;
-        display: inline-flex;
-        justify-content: center;
-        background:rgb(6, 21, 28);
-        align-content: center;
-        img {
-            width: calc(100% /3);
-            max-height: 75vh;
-            object-fit: contain;
-            object-position: center center;
-        }
-    }
+    
     .carousel1 {
       .slideshow-container{
         position: relative;
         width: 100%;
         overflow: hidden;
+        background-color: rgb(240, 235, 235);
       }
       .image-container{
         display: block;
         overflow: hidden;
       }
       .image-container .image{
+        
         width: 100%;
+        max-width: 1350px;
+        display: block;
         max-height: 500px;
-        margin: 0px;
+        margin: 0px auto;
         object-fit: cover;
       }
       .prev , .next {
