@@ -47,7 +47,7 @@ header .nav-mobile .logo::before {
 }
 
 header .nav-mobile .hamburger {
-  z-index: 99;
+  z-index: 10;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -113,7 +113,7 @@ header .nav-mobile .menu-slide .menu-items {
 header .nav-mobile .menu-slide .menu-items .menu-item {
   font-size: 1.1rem;
   list-style: none;
-  padding-top: calc(100vh/10);
+  padding-top: calc(100vh / 10);
 }
 
 header .nav-mobile .menu-slide .menu-items .menu-item a {
@@ -148,14 +148,14 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   margin-left: 10%;
 }
 
-.hero .hero-list h1 {
+.hero .hero-list .title {
   color: white;
   font-weight: bold;
   font-size: 2rem;
   margin-top: auto;
 }
 
-.hero .hero-list p {
+.hero .hero-list .profile {
   padding: 2rem 0;
   color: white;
   font-size: 1rem;
@@ -192,7 +192,7 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   color: inherit;
 }
 
-.hero img {
+.hero .hero-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -229,20 +229,20 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   font-size: 1.2rem;
 }
 
-.media .media-list li {
+.media .media-list .media-icon {
   margin: 0 15px;
   color: white;
   cursor: pointer;
 }
 
-.media .media-list li:hover {
+.media .media-list .media-icon:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
   color: #e06b2c;
 }
 
 .media .media-list::before {
-  content: '';
+  content: "";
   width: 25%;
   height: 2px;
   background: white;
@@ -251,7 +251,7 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
 }
 
 .media .media-list::after {
-  content: '';
+  content: "";
   width: 25%;
   height: 2px;
   background: white;
@@ -264,7 +264,7 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   width: 100%;
 }
 
-.menu h3 {
+.menu .subtitle {
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center;
@@ -292,7 +292,9 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   color: #e06b2c;
 }
 
-.menu .menu-list .cupcakes, .menu .menu-list .bread, .menu .menu-list .cakes {
+.menu .menu-list .cupcakes,
+.menu .menu-list .bread,
+.menu .menu-list .cakes {
   text-align: center;
 }
 
@@ -323,7 +325,8 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
      object-fit: cover;
 }
 
-.my-latest .carousel1 .prev, .my-latest .carousel1 .next {
+.my-latest .carousel1 .prev,
+.my-latest .carousel1 .next {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -347,8 +350,9 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   border-radius: 3px 0px 0px 3px;
 }
 
-.my-latest .carousel1 .prev:hover, .my-latest .carousel1 .next:hover {
-  background-color: black;
+.my-latest .carousel1 .prev:hover,
+.my-latest .carousel1 .next:hover {
+  background-color: #3b3b3b;
 }
 
 .my-latest .carousel1 .dot-container {
@@ -365,89 +369,65 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   display: inline-block;
   cursor: pointer;
   z-index: 1;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 3px;
 }
 
-.my-latest .carousel1 .active, .my-latest .carousel1 .dot:hover {
-  background-color: #555;
-}
-
-.my-latest .carousel1 .content {
-  color: white;
-  text-align: justify;
-  padding: 12px 60px;
-  letter-spacing: 1px;
-  font-family: verdana,sans-serif;
+.my-latest .carousel1 .active,
+.my-latest .carousel1 .dot:hover {
+  background-color: #3b3b3b;
 }
 
 .my-latest .carousel1 .fade {
-  -webkit-animation: fade .3s ease-in-out;
-          animation: fade .3s ease-in-out;
+  -webkit-animation: fade 0.3s ease-in-out;
+          animation: fade 0.3s ease-in-out;
 }
 
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
   50% {
     opacity: 0.5;
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
+    -webkit-transform: scaleX(1.01);
+            transform: scaleX(1.01);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
 @keyframes fade {
   0% {
     opacity: 0;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
   50% {
     opacity: 0.5;
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
+    -webkit-transform: scaleX(1.01);
+            transform: scaleX(1.01);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .my-latest .carousel1 .prev, .my-latest .carousel1 .next {
-    padding: 12px;
-    font-size: 18px;
-  }
-  .my-latest .carousel1 .dot-container {
-    padding: 0px;
-  }
-  .my-latest .carousel1 .dot {
-    height: 4px;
-    width: 18px;
-  }
-  .my-latest .carousel1 .content {
-    font-size: 12px;
-    padding: 6px 24px;
-  }
-}
-
-.my-latest h3 {
+.my-latest .subtitle {
   margin-bottom: 80px;
   font-size: 1.1rem;
   text-align: center;
   font-weight: bold;
 }
 
-.my-latest .more-btn {
+.my-latest .see-more-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -459,6 +439,14 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   color: white;
   padding: 8px 30px;
   margin-bottom: 50px;
+  outline: none;
+  border-radius: 18px;
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+.my-latest .see-more-btn:hover {
+  background-color: rgba(224, 107, 44, 0.9);
 }
 
 .about-me {
@@ -467,7 +455,7 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   color: white;
 }
 
-.about-me img {
+.about-me .my-picture {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -485,20 +473,20 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   padding-bottom: 50px;
 }
 
-.about-me .about-text h3 {
+.about-me .about-text .subtitle {
   font-size: 1.1rem;
   text-align: center;
   margin: 25px auto;
 }
 
 .about-me .about-text p {
-  font-size: 0.90rem;
+  font-size: 0.9rem;
   line-height: 1.5rem;
   text-align: justify;
   padding-bottom: 15px;
 }
 
-.about-me .about-text .hobbies .hobby {
+.about-me .about-text .hobby {
   margin-left: 20px;
   list-style: circle;
   font-size: 0.85rem;
@@ -510,7 +498,7 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   text-align: center;
 }
 
-.contact h3 {
+.contact .subtitle {
   font-size: 1.1rem;
   font-weight: bold;
   margin-bottom: 50px;
@@ -522,11 +510,11 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   font-size: 1.1rem;
 }
 
-.contact i {
+.contact .media-icon {
   color: #e06b2c;
 }
 
-.contact i:hover {
+.contact .media-icon:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -546,16 +534,16 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   margin-bottom: 100px;
 }
 
-.contact .media-list li {
+.contact .media-list .media-icon {
   padding: 0 20px;
   color: #e06b2c;
 }
 
 @media (min-width: 400px) {
-  .hero .hero-list h1 {
+  .hero .hero-list .title {
     font-size: calc(2rem + 4.107vw + -16.429px);
   }
-  .hero .hero-list p {
+  .hero .hero-list .profile {
     line-height: calc(2rem + 1.143vw + -4.571px);
     font-size: calc(1rem + 0.536vw + -2.143px);
     margin-right: 30%;
@@ -576,7 +564,7 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .about-me img {
+  .about-me .my-picture {
     margin: auto;
     width: 30%;
     height: 600px;
@@ -610,11 +598,26 @@ header .nav-mobile .menu-slide .menu-items .menu-item a {
   }
 }
 
+@media (max-width: 700px) {
+  .prev,
+  .next {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .dot-container {
+    padding: 0px;
+  }
+  .dot {
+    height: 4px;
+    width: 18px;
+  }
+}
+
 @media (min-width: 960px) {
-  .hero .hero-list h1 {
+  .hero .hero-list .title {
     font-size: calc(2rem + 23px);
   }
-  .hero .hero-list p {
+  .hero .hero-list .profile {
     font-size: calc(1rem + 3px);
     line-height: calc(2rem + 6.4px);
     margin-right: 45%;

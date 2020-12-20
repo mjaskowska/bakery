@@ -4,7 +4,8 @@
   box-sizing: border-box;
   font-family: Verdana, serif;
 }
-$orange:  rgb(224, 107, 44);
+$orange: rgb(224, 107, 44);
+
 header {
   .nav-mobile {
     position: relative;
@@ -43,10 +44,8 @@ header {
         color: transparent;
       }
     }
-
     .hamburger {
-      
-      z-index: 99;
+      z-index: 10;
       position: absolute;
       top: 30px;
       right: 30px;
@@ -54,7 +53,6 @@ header {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
       .line {
         height: 3px;
         width: 30px;
@@ -64,7 +62,7 @@ header {
       }
     }
     .menu-slide {
-     overflow-x: hidden;
+      overflow-x: hidden;
       color: white;
       height: 100vh;
       width: 350px;
@@ -73,7 +71,6 @@ header {
       position: absolute;
       top: 0;
       right: 0px;
-      
       .menu-items {
         position: absolute;
         top: 0;
@@ -90,8 +87,8 @@ header {
         .menu-item {
           font-size: 1.1rem;
           list-style: none;
-          padding-top: calc(100vh/10);
-          a{
+          padding-top: calc(100vh / 10);
+          a {
             padding: 10px 30px;
             text-decoration: none;
             color: inherit;
@@ -101,7 +98,7 @@ header {
     }
   }
 }
-.menu-active{
+.menu-active {
   transform: translateX(-500px);
   transition: transform 0.7s;
 }
@@ -115,13 +112,13 @@ header {
     height: 100%;
     margin-left: 10%;
 
-    h1 {
+    .title {
       color: rgb(255, 255, 255);
       font-weight: bold;
       font-size: 2rem;
       margin-top: auto;
     }
-    p {
+    .profile {
       padding: 2rem 0;
       color: rgb(255, 255, 255);
       font-size: 1rem;
@@ -130,7 +127,7 @@ header {
       margin-right: 20%;
     }
     .hire-me-btn {
-        cursor: pointer;
+      cursor: pointer;
       margin-bottom: auto;
       width: fit-content;
       padding: 10px 30px;
@@ -142,8 +139,8 @@ header {
       letter-spacing: 3px;
       box-shadow: 0 0.7rem 10px rgba(0, 0, 0, 0.45);
       &:hover {
-          background:  rgba(0, 0, 0, 0.6);
-          transform: scale(1.02);
+        background: rgba(0, 0, 0, 0.6);
+        transform: scale(1.02);
       }
       a {
         text-decoration: none;
@@ -152,7 +149,7 @@ header {
     }
   }
 
-  img {
+  .hero-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -165,96 +162,94 @@ header {
   }
 }
 .media {
-    position: relative;
-    
-    .media-list {
-        list-style: none;
-        position: absolute;
-        top: -40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        width: 100%;
-        font-size: 1.2rem;
-       
-        li {
-            margin: 0 15px;
-            color: white;
-            cursor: pointer;
-            &:hover {
-              transform: scale(1.2);
-              color: $orange;
-            }
-        }
-        &::before { 
-            content: '';
-            width: 25%;
-            height: 2px;
-            background: white;
-            margin-left: 10px;
-            margin-right: 5px;
-            } 
-        &::after { 
-            content: '';
-            width: 25%;
-            height: 2px;
-            background: white;
-            margin-right: 10px;
-            margin-left: 5px;
-        } 
+  position: relative;
+
+  .media-list {
+    list-style: none;
+    position: absolute;
+    top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    font-size: 1.2rem;
+
+    .media-icon {
+      margin: 0 15px;
+      color: white;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+        color: $orange;
+      }
     }
+
+    &::before {
+      content: "";
+      width: 25%;
+      height: 2px;
+      background: white;
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+    &::after {
+      content: "";
+      width: 25%;
+      height: 2px;
+      background: white;
+      margin-right: 10px;
+      margin-left: 5px;
+    }
+  }
 }
 .menu {
-    margin: 150px 0;
-    width: 100%;
-    
-    h3 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 60px;
-    }
-    .menu-list {
-       display: grid;
-       grid-template-columns: 1fr 1fr 1fr;
-       grid-gap: 10px;
-       font-size: 1.5rem;
-       max-width: 600px;
-       margin: auto;
-        p {
-            font-size: 0.9rem;
-            margin-top: 12px;
-            font-weight: bold;
-        }
-        i {
-          color: $orange;
-        }
-        .cupcakes, .bread, .cakes {
-            
-            text-align: center;
-            
-        }
-    }
-}
+  margin: 150px 0;
+  width: 100%;
 
-.my-latest{
+  .subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  .menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: auto;
+    p {
+      font-size: 0.9rem;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    i {
+      color: $orange;
+    }
+    .cupcakes,
+    .bread,
+    .cakes {
+      text-align: center;
+    }
+  }
+}
+.my-latest {
   margin-bottom: 120px;
-    width: 100%;
-    
-    .carousel1 {
-      .slideshow-container{
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        background-color: rgb(240, 235, 235);
-      }
-      .image-container{
-        display: block;
-        overflow: hidden;
-      }
-      .image-container .image{
-        
+  width: 100%;
+
+  .carousel1 {
+    .slideshow-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background-color: rgb(240, 235, 235);
+    }
+    .image-container {
+      display: block;
+      overflow: hidden;
+      .image {
         width: 100%;
         max-width: 1350px;
         display: block;
@@ -262,191 +257,174 @@ header {
         margin: 0px auto;
         object-fit: cover;
       }
-      .prev , .next {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: auto;
-        padding: 16px;
-        margin-top: 22px;
-        color: white;
-        font-weight: bold;
-        font-size: 30px;
-        border-radius: 0px 3px 3px 0px;
-        cursor: pointer;
-        user-select: none;
-      }
-      .next{
-        right: 0px;
-        border-radius: 3px 0px 0px 3px;
-      }
-      .prev:hover , .next:hover{
-        background-color: black;
-      }
-      .dot-container{
-        text-align: center;
-      }
-      .dot{
-        position: inherit;
-        top: -40px;
-        height: 8px;
-        width: 36px;
-        background-color: #bbb;
-        border-radius: 0px;
-        display: inline-block;
-        cursor: pointer;
-        z-index: 1;
-        transition: all .5s;
-      }
-      .active , .dot:hover{
-        background-color: #555;
-      }
-      .content{
-        color: white;
-        text-align: justify;
-        padding: 12px 60px;
-        letter-spacing: 1px;
-        font-family: verdana,sans-serif;
-      }
-      .fade{
-        animation: fade .3s ease-in-out;
-      }
-      @keyframes fade {
-        0%{
-          opacity: 0;
-          transform: scale(1);
-        }
-        50%{
-          opacity: 0.5;
-          transform: scale(1.01);
-        }
-        100%{
-          opacity: 1;
-          transform: scale(1);
-        }
-      }
-      @media only screen and (max-width:700px) {
-        .prev , .next{
-          padding: 12px;
-          font-size: 18px;
-        }
-        .dot-container{
-          padding: 0px;
-        }
-        .dot{
-          height: 4px;
-          width: 18px;
-        }
-        .content{
-          font-size: 12px;
-          padding: 6px 24px;
-        }
-      }
     }
-   
-    
-    h3{
-        margin-bottom: 80px;
-        font-size: 1.1rem;
-        text-align: center;
-        font-weight: bold;
-       }
-    
-    .more-btn {
-        width: fit-content;
-        margin-top: 30px;
-        margin-left: 10%;
-        background: $orange;
-        border: 2px solid $orange;
-        font-size: 0.8rem;
-        color: white;
-        padding: 8px 30px;
-        margin-bottom: 50px;
 
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 16px;
+      margin-top: 22px;
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+      border-radius: 0px 3px 3px 0px;
+      cursor: pointer;
+      user-select: none;
     }
-}
-.about-me{
-    width: 100%;
-    background: $orange;
-    color: white;
-    img {
-        height: 200px;
-        width: 200px;
-        border-radius: 50%;
-        object-fit: cover;
-        display: block;
-        margin: auto;
+    .next {
+      right: 0px;
+      border-radius: 3px 0px 0px 3px;
     }
-    .about-text {
-        width: 90%;
-        margin-top: 30px;
-        margin: auto;
-        padding: 20px 0;
-        padding-bottom: 50px;
-        h3 {
-            font-size: 1.1rem;
-            text-align: center;
-            margin: 25px auto;
-        }
-        p {
-            font-size: 0.90rem;
-            line-height: 1.5rem;
-            text-align: justify;
-            padding-bottom: 15px;
-        }
-        .hobbies {
-            .hobby{
-                margin-left: 20px;
-                list-style: circle;
-                font-size: 0.85rem;
-            }
-        }
+    .prev:hover,
+    .next:hover {
+      background-color: rgb(59, 59, 59);
     }
-}
-.contact {
-    margin: 150px 0;
-    width: 100%;
+    .dot-container {
+      text-align: center;
+    }
+    .dot {
+      position: inherit;
+      top: -40px;
+      height: 8px;
+      width: 36px;
+      background-color: #bbb;
+      border-radius: 0px;
+      display: inline-block;
+      cursor: pointer;
+      z-index: 1;
+      transition: all 0.5s;
+      border-radius: 3px;
+    }
+    .active,
+    .dot:hover {
+      background-color: rgb(59, 59, 59);
+    }
+    .fade {
+      animation: fade 0.3s ease-in-out;
+    }
+    @keyframes fade {
+      0% {
+        opacity: 0;
+        transform: scaleX(1);
+      }
+      50% {
+        opacity: 0.5;
+        transform: scaleX(1.01);
+      }
+      100% {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .subtitle {
+    margin-bottom: 80px;
+    font-size: 1.1rem;
     text-align: center;
-    h3 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        margin-bottom: 50px;
+    font-weight: bold;
+  }
+
+  .see-more-btn {
+    width: fit-content;
+    margin-top: 30px;
+    margin-left: 10%;
+    background: $orange;
+    border: 2px solid $orange;
+    font-size: 0.8rem;
+    color: white;
+    padding: 8px 30px;
+    margin-bottom: 50px;
+    outline: none;
+    border-radius: 18px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+    &:hover {
+      background-color: rgba($orange, 0.9);
+    }
+  }
+}
+.about-me {
+  width: 100%;
+  background: $orange;
+  color: white;
+  .my-picture {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+  }
+  .about-text {
+    width: 90%;
+    margin-top: 30px;
+    margin: auto;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    .subtitle {
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 25px auto;
     }
     p {
-      padding-top: 15px;
-        margin-bottom: 50px;
-        font-size: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      text-align: justify;
+      padding-bottom: 15px;
     }
-    i {
-      color: $orange;
-      &:hover {
-        transform: scale(1.2);
-      }
+
+    .hobby {
+      margin-left: 20px;
+      list-style: circle;
+      font-size: 0.85rem;
     }
-    
-    .media-list {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        margin-bottom: 100px;
-        li {
-            padding: 0 20px;
-            color: $orange;
-        }
-    }
+  }
 }
+.contact {
+  margin: 150px 0;
+  width: 100%;
+  text-align: center;
+  .subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  p {
+    padding-top: 15px;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+  }
+  .media-icon {
+    color: $orange;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
-
+  .media-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-bottom: 100px;
+    .media-icon {
+      padding: 0 20px;
+      color: $orange;
+    }
+  }
+}
 
 @media (min-width: 400px) {
   .hero {
     .hero-list {
-      h1 {
+      .title {
         font-size: calc(2rem + 4.107vw + -16.429px);
       }
-      p {
+      .profile {
         line-height: calc(2rem + 1.143vw + -4.571px);
         font-size: calc(1rem + 0.536vw + -2.143px);
         margin-right: 30%;
@@ -454,47 +432,61 @@ header {
     }
   }
 }
-@media(min-width: 600px){
-    .about-me {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: stretch;
-        img {
-            margin: auto;
-            width: 30%;
-            height: 600px;
-            max-height: 65vh;
-            border-radius: 0;
-            object-position: center 25%;
-            align-self: flex-start;
-        }
-        .about-text{
-            padding-left: 40px;
-            padding-right: 60px;
-        }
+@media (min-width: 600px) {
+  .about-me {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    .my-picture {
+      margin: auto;
+      width: 30%;
+      height: 600px;
+      max-height: 65vh;
+      border-radius: 0;
+      object-position: center 25%;
+      align-self: flex-start;
     }
-    .contact {
-        .contact-info{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .phone{
-            padding-right: 20px;
-        }
-        .email {
-            padding-left: 20px;
-        }
+    .about-text {
+      padding-left: 40px;
+      padding-right: 60px;
     }
+  }
+  .contact {
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .phone {
+      padding-right: 20px;
+    }
+    .email {
+      padding-left: 20px;
+    }
+  }
+}
+@media (max-width: 700px) {
+  .prev,
+  .next {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .dot-container {
+    padding: 0px;
+  }
+  .dot {
+    height: 4px;
+    width: 18px;
+  }
 }
 @media (min-width: 960px) {
   .hero {
     .hero-list {
-      h1 {
+      .title {
         font-size: calc(2rem + 23px);
       }
-      p {
+      .profile {
         font-size: calc(1rem + 3px);
         line-height: calc(2rem + 6.4px);
         margin-right: 45%;
